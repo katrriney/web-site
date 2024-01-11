@@ -1,0 +1,33 @@
+{% extends 'main/shablon.html' %}
+
+{% block title%}Запись на прием{% endblock %}
+
+{% block content%}
+    <div>
+      <h1 class="header-zap">Запись на прием к врачу</h1>
+      <form method="post" class="form-zap">
+        {% csrf_token %}
+        <div class="reg-zap">
+          <div class="display">
+              <div class="input-zap">
+              {{ form.FIO }}
+              {{ form.date_bith }}
+              {{ form.category }}
+              {{ form.date }}
+              {{ form.number }}
+            </div>
+            <div class="text-zap">
+              <p class="fio">ФИО:</p>
+              <p class="date">Дата рождения:</p><br>
+              <p class="cv">Категория врача:</p><br>
+              <p class="datetime">Дата и время записи:</p>
+              <p class="number">Номер телефона:</p>
+          </div>
+          </div>
+
+            <span>{{ error }}</span><br>
+            <button class="btn btn-success" type="submit">Записаться</button>
+        </div>
+      </form>
+    </div>
+{% endblock %}

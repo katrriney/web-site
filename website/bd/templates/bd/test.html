@@ -1,0 +1,12 @@
+{% block content%}
+    <h1>Врачи</h1>
+    {% if vrach %}
+        {% for el in vrach %}
+            <div class="alert">
+                <h3>{{ el.FIO }}</h3>
+            </div>
+        {% endfor %}
+    {% else %}
+     <p>Пока нет записей</p>
+    {% endif %}
+{% endblock %}

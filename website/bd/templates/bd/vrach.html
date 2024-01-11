@@ -1,0 +1,28 @@
+{% extends 'main/shablon.html' %}
+{% block title%}Врачи{% endblock %}
+{% block content%}
+    <h1 class="header-zap">Врачи</h1>
+    {% if vrach %}
+        {% for el in vrach %}
+        <div class="card-vrach">
+            <h3>{{ el.FIO }}</h3>
+            <div class="all-vrach">
+                <div class="vrach">
+                <p>{{ el.category}}</p>
+                <p>{{ el.stag}} лет</p>
+                <p>{{ el.date}}</p>
+                <p>{{ el.time}}</p>
+            </div>
+            <div class="text-vrach">
+                <p>Специальность:</p>
+                <p>Стаж работы:</p>
+                <p>Дни работы:</p>
+                <p>Часы работы:</p>
+            </div>
+            </div>
+        </div>
+        {% endfor %}
+    {% else %}
+     <p>Пока нет записей</p>
+    {% endif %}
+{% endblock %}

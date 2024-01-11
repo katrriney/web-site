@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>  {% block title %} {% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+  <aside>
+    <ul class="menu">
+        <div class="icon">
+            <a href="{%url 'home' %}"><li><img src="{% static 'main/media/home.png' %}" ></li></a>
+            <a href="{%url 'vrach' %}"><li><img src="{% static 'main/media/doctors.png' %}"></li></a>
+            <a href="{%url 'zapis' %}"><li><img src="{% static 'main/media/zap.png' %}"></li></a>
+            <a href="{% url 'zapis' %}"><li><img src="{% static 'main/media/archive.png' %}" ></li></a>
+            <a href="{% url 'create' %}"><li><img src="{% static 'main/media/addzap.png' %}" ></li></a>
+        </div>
+        <div class="registration">
+            <li class="last"> {{user.username}} | <a href=" {% url 'users:login' %}"><img src="{% static 'main/media/exit.png' %}" ></a></li>
+        </div>
+    </ul>
+  </aside>
+  <main>
+      {% block content %}
+      {% endblock %}
+  </main>
+</body>
+</html>

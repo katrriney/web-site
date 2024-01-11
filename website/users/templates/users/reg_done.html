@@ -1,0 +1,10 @@
+{% extends 'main/shablon.html' %}
+{% load static %}
+{% block title%}Главная{% endblock %}
+
+{% block content%}
+    <h1 class="reg-in">Добро пожаловать</h1>
+    <p class="reg-in">Вы успешно прошли регистрацию, перейдите по <a  class="link-in" href="{% url 'users:login' %}">сcылке</a></p>
+
+
+{% endblock %}

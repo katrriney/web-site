@@ -1,0 +1,94 @@
+.form-reg{
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+.btn{
+    position: relative;
+    width: 200px;
+    top: 50px;
+    border-radius: 50px;
+}
+
+.auto {
+    width: 100%;
+    height: 450px;
+    display: flex;
+    border: 1px solid;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 50px;
+}
+
+
+.form-input{
+    width: 305px;
+    height: 50px;
+    padding-left: 25px;
+    font-size: 16px;
+    border-radius: 30px;
+    border: 1px solid;
+}
+
+
+.in{
+    width: 300px;
+    border-radius: 50px;
+    height: 40px;
+}
+
+input{
+    width: 330px;
+    border-radius: 50px;
+    height: 40px;
+    border: 1px solid;
+    padding-left: 20px;
+}
+.display{
+    display: flex;
+}
+
+.input-reg{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 30px;
+}
+
+.username{
+    position: relative;
+    bottom: 15px;
+}
+.emaill{
+    position: relative;
+    bottom: 9px;
+}
+
+.fn{
+    position: relative;
+    bottom: 2px;
+}
+
+.ln{
+    position: relative;
+    top: 4px;
+}
+
+.pass{
+    position: relative;
+    top: 9px;
+}
+.pass2{
+    position: relative;
+    top: 15px;
+}
+
+.link-reg{
+    position: relative;
+    left: 610px;
+    text-decoration: none;
+    color: black;
+    top: 15px;
+    font-size: 25px;
+    font-weight: 300;
+}

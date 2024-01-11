@@ -1,0 +1,32 @@
+{% extends 'main/shablon.html' %}
+
+{% block title%}Запись на прием{% endblock %}
+
+{% block content%}
+    <h1 class="header-zap">Ваши записи</h1>
+    {% if zapis %}
+        {% for el in zapis %}
+            <div class="alert">
+                <div class="card">
+                    <h3 class="header-fio">{{ el.FIO }}</h3>
+                    <div class="all">
+                        <div class="zapisi">
+                        <p>{{ el.date_bith}}</p>
+                        <p>{{ el.category }}</p>
+                        <p>{{ el.date}}</p>
+                        <p>{{ el.number}}</p>
+                    </div>
+                    <div class="text-zapisi">
+                        <p>Дата рождения:</p>
+                        <p>Категория врача:</p>
+                        <p>Дата и время записи:</p>
+                        <p>Номер телефона:</p>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    {% else %}
+     <p>Пока нет записей</p>
+    {% endif %}
+{% endblock %}
